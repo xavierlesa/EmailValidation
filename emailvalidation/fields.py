@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*-
 
-from django.forms.filds import EmailField
+from django.forms.fields import EmailField
 from django.core.exceptions import ValidationError
 from django.utils.translation import ugettext_lazy as _
 from .emailvalidation import EmailValidation, EmailValidationException
@@ -8,7 +8,7 @@ from .emailvalidation import EmailValidation, EmailValidationException
 
 class EmailValidationField(EmailField):
     def validate(self, value):
-        super(EmailValidationField).super(value)
+        super(EmailValidationField, self).validate(value)
 
         email_validation = EmailValidation(value, validate=False)
 

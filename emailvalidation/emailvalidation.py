@@ -38,7 +38,7 @@ class EmailValidation:
         nfkd_form = unicodedata.normalize('NFKD', input_str)
         return u"".join([c for c in nfkd_form if not unicodedata.combining(c)])
 
-    def is_valid(self, check_mx=True, verify=True, debug=settings.DEBUG, smtp_timeout=10):
+    def is_valid(self, check_mx=True, verify=True, debug=lambda: settings.DEBUG, smtp_timeout=10):
         return validate_email(self.email, check_mx, verify, debug, smtp_timeout)
 
     def validate(self):
