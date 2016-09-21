@@ -13,6 +13,7 @@ setup(name='emailvalidation',
         packages=find_packages(exclude=['ez_setup', 'examples', 'tests']),
         include_package_data=True,
         install_requires=[
+            'pyDNS',
             'validate-email',
         ],
         zip_safe=False,
