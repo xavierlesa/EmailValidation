@@ -5,7 +5,9 @@
 # Distributed under the BSD license, see LICENSE
 from setuptools import setup, find_packages
 import sys, os
-from emailvalidation import version
+
+version = '0.1'
+author = 'Xavier Lesa <xavier@link-b.com>'
 
 setup(name='emailvalidation', 
         version=version, 
